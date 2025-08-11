@@ -1,9 +1,16 @@
+server:
+  port: 8086
+
 spring:
   application:
     name: notification-service
 
 notification:
-  service:
-    provider: smtp
-    email-from: noreply@managementsystem.com
-    retry-attempts: 3
+  email:
+    enabled: true
+    smtp-server: smtp.example.com
+    smtp-port: 587
+    username: your_email@example.com
+    password: your_password
+  sms:
+    enabled: false
