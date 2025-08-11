@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: department-service
+
+department:
+  service:
+    cache-enabled: true
+    max-departments: 50
