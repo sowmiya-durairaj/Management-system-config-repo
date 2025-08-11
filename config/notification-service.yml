@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: notification-service
+
+notification:
+  service:
+    provider: smtp
+    email-from: noreply@managementsystem.com
+    retry-attempts: 3
