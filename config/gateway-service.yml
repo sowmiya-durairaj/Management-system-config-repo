@@ -1,19 +1,33 @@
-spring:
-  application:
-    name: gateway-service
-
 server:
   port: 8080
 
 spring:
+  application:
+    name: gateway-service
   cloud:
     gateway:
       routes:
-        - id: employee-service
+        - id: auth-service
           uri: http://localhost:8081
           predicates:
-            - Path=/employees/**
-        - id: department-service
+            - Path=/auth/**
+        - id: employee-service
           uri: http://localhost:8082
           predicates:
+            - Path=/employees/**
+        - id: task-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/tasks/**
+        - id: department-service
+          uri: http://localhost:8084
+          predicates:
             - Path=/departments/**
+        - id: project-service
+          uri: http://localhost:8085
+          predicates:
+            - Path=/projects/**
+        - id: notification-service
+          uri: http://localhost:8086
+          predicates:
+            - Path=/notifications/**
