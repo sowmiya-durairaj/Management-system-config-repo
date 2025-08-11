@@ -1,0 +1,10 @@
+server:
+  port: 0   # Random port for microservices (overridden in service files if needed)
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
